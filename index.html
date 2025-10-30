@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Meta básicas -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casamento Leandro & Manu – 2025</title>
+  <meta name="description" content="Nossa história, cerimônia e lista de presentes no estilo Summer Breeze." />
+
+  <!-- SEO / Open Graph -->
+  <meta property="og:title" content="Casamento Leandro & Manu – 2025" />
+  <meta property="og:description" content="Nossa história, cerimônia e lista de presentes no estilo Summer Breeze." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Leandro+%26+Manu" />
+  <meta property="og:url" content="https://www.seu-dominio.com.br/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Paleta Summer Breeze (pastéis) */
+      --sb-mint: #9ad7c5;        /* verde-água suave */
+      --sb-sand: #f5efe6;        /* areia clara */
+      --sb-white: #ffffff;       /* branco */
+      --sb-peach: #ffd8c5;       /* pêssego suave */
+      --sb-gold:  #d7b98e;       /* dourado claro */
+      --sb-ink:   #2f3a3a;       /* texto principal */
+      --sb-ink-70: rgba(47,58,58,.7);
+    }
+    html{scroll-behavior:smooth;}
+    body{
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--sb-ink);
+      background: var(--sb-white);
+    }
+    h1,h2,h3,.brand{
+      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      letter-spacing:.2px;
+    }
+    /* Navbar */
+    .navbar{
+      transition: background-color .3s ease, box-shadow .3s ease;
+      backdrop-filter: saturate(180%) blur(8px);
+    }
+    .navbar.transparent{
+      background: linear-gradient(to bottom, rgba(255,255,255,.30), rgba(255,255,255,.08));
+    }
+    .navbar.solid{
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    .nav-link{font-weight:500;}
+    .nav-link:hover{color: var(--sb-mint) !important;}
+
+    /* Hero */
+    .hero{
+      min-height: 70vh;
+      background: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+      position: relative;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(to bottom, rgba(255,255,255,.55), rgba(255,255,255,.8));
+    }
+    .hero-content{
+      position:relative; z-index:2; text-align:center;
+      padding: 2rem;
+      color: var(--sb-ink);
+    }
+    .brand{
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      color: var(--sb-ink);
+    }
+    .subbrand{
+      font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; color: var(--sb-ink-70);
+    }
+    .divider-floral{
+      height: 32px; opacity:.8; filter: drop-shadow(0 2px 0 rgba(0,0,0,.05));
+      background: url('https://svgshare.com/i/14oP.svg') center/contain no-repeat; /* floral sutil */
+    }
+
+    /* Seções */
+    section{padding: 80px 0;}
+    .section-title{
+      text-align:center; margin-bottom: .5rem;
+    }
+    .section-lead{
+      text-align:center; color:var(--sb-ink-70); margin-bottom:2rem;
+    }
+    .bg-sand{background: var(--sb-sand);}
+    .bg-mint-veil{background: linear-gradient(180deg, rgba(154,215,197,.13), rgba(154,215,197,.05));}
+
+    /* História */
+    .story-photo{
+      border-radius: 20px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+      border: 4px solid #fff;
+    }
+    .polaroid{
+      background:#fff; padding:12px 12px 36px; border-radius:16px; display:inline-block;
+      box-shadow: 0 16px 40px rgba(0,0,0,.08);
+    }
+    .timeline{
+      position:relative; padding: 20px 0; margin-top: 24px;
+    }
+    .timeline::before{
+      content:""; position:absolute; left: 8px; top:0; bottom:0; width:2px; background: linear-gradient(var(--sb-mint), var(--sb-gold));
+    }
+    .tl-item{position:relative; padding-left:36px; margin-bottom:20px;}
+    .tl-item .dot{
+      position:absolute; left:-1px; top:4px; width:18px; height:18px; border-radius:50%;
+      background: var(--sb-mint); border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,.12);
+    }
+    @media(min-width:992px){
+      .timeline{
+        display:flex; gap:24px; align-items:flex-start;
+      }
+      .timeline::before{display:none;}
+      .tl-item{
+        flex:1; padding:0; margin:0; text-align:center;
+      }
+      .tl-item .dot{position:static; display:inline-block; margin-bottom:10px;}
+    }
+
+    /* Cerimônia */
+    .info-card{
+      border:1px solid rgba(0,0,0,.06);
+      background:#fff; border-radius:20px; padding:20px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.06);
+      height:100%;
+    }
+    .info-icon{
+      width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+      background: linear-gradient(135deg, var(--sb-mint), var(--sb-peach));
+      color:#fff; font-size:22px; margin-bottom:10px;
+    }
+    .btn-gradient{
+      background: linear-gradient(135deg, var(--sb-mint), var(--sb-gold));
+      border:none; color:#fff;
+    }
+    .btn-gradient:hover{opacity: .92; color:#fff;}
+
+    /* Presentes */
+    .gift-card{
+      border:1px solid rgba(0,0,0,.06);
+      border-radius:22px; overflow:hidden; background:#fff;
+      box-shadow: 0 10px 26px rgba(0,0,0,.06);
+      height:100%; display:flex; flex-direction:column;
+      transition: transform .2s ease;
+    }
+    .gift-card:hover{transform: translateY(-4px);}
+    .gift-img{aspect-ratio: 16/10; object-fit: cover; width:100%;}
+    .gift-body{padding:18px;}
+    .price{color: var(--sb-ink); font-weight:600;}
+    .badge-exp{background: rgba(215,185,142,.2); color: #7a5d2c;}
+
+    /* RSVP */
+    .rsvp-card{
+      border-radius:22px; border:1px solid rgba(0,0,0,.06); background:#fff;
+      box-shadow: 0 10px 26px rgba(0,0,0,.06);
+    }
+
+    /* Rodapé */
+    footer{
+      padding: 40px 0; background: #fff; border-top: 1px solid rgba(0,0,0,.06);
+    }
+    .footer-note{color: var(--sb-ink-70);}
+
+    /* Acessibilidade & focos */
+    a:focus, button:focus, input:focus, textarea:focus{
+      outline: 3px solid var(--sb-mint) !important; outline-offset:2px !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg fixed-top transparent">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#top" aria-label="Página inicial">
+        <span class="brand">Leandro &amp; Manu</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#historia">Nossa História</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cerimonia">Cerimônia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#presentes">Lista de Presentes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rsvp">Confirme Sua Presença</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="hero d-flex">
+    <div class="hero-content container" data-aos="fade-up">
+      <div class="divider-floral mb-3" aria-hidden="true"></div>
+      <h1 class="brand">Leandro <span aria-hidden="true">&amp;</span> Manu</h1>
+      <p class="subbrand mt-2">01 de novembro de 2025 • Uberaba, MG</p>
+      <div class="divider-floral mt-3" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <!-- HISTÓRIA -->
+  <section id="historia" aria-labelledby="historia-title">
+    <div class="container">
+      <h2 id="historia-title" class="section-title" data-aos="fade-up">Nossa História</h2>
+      <p class="section-lead" data-aos="fade-up" data-aos-delay="50">Tudo começou assim…</p>
+
+    <div class="row g-4 align-items-center">
+        <!-- Coluna da imagem -->
+        <div class="col-lg-6" data-aos="fade-right">
+            <div class="position-relative rounded-4 overflow-hidden shadow-sm">
+            <img 
+                src="./images/nos.jpg" 
+                alt="Leandro e Manu sorrindo ao pôr do sol"
+                class="img-fluid w-100" 
+                style="border-radius: 24px; max-height: 360px; object-fit: cover; filter: brightness(85%) contrast(105%);">
+            <!-- Gradiente suave para contraste -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" 
+                style="background: linear-gradient(to bottom right, rgba(255,255,255,0.05), rgba(0,0,0,0.25));">
+            </div>
+            </div>
+        </div>
+
+        <!-- Coluna do texto -->
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="50">
+            <div style="color:#374240; line-height:1.7;">
+            <p>Nos conhecemos no forró, em um daqueles encontros em que o destino dá um empurrãozinho. Foi a irmã da Manu, Érika, quem pediu para que o Leandro a tirasse para dançar — e, desde aquele primeiro passo, algo especial começou a se formar.</p>
+            <p>Vieram muitas danças, treinos e risadas. O forró, que primeiro nos uniu, virou o pano de fundo de uma história cheia de sintonia. Entre viagens para a Serra da Canastra e aventuras em festivais de música, descobrimos que a alegria está nas coisas simples e na companhia certa.</p>
+            <p>Em agosto, a vida nos presenteou com o Nicolas — nosso pequeno grande amor — e, agora, celebramos mais um passo dessa linda jornada: o nosso casamento. 💕</p>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- Timeline -->
+      <div class="timeline mt-4" aria-label="Linha do tempo" data-aos="fade-up" data-aos-delay="100">
+        <div class="tl-item">
+          <span class="dot" aria-hidden="true"></span>
+          <h6 class="fw-semibold mb-1"><i class="bi bi-flower1 me-2"></i>Primeiro encontro</h6>
+          <div class="text-muted small">Março 2024</div>
+        </div>
+        <div class="tl-item">
+          <span class="dot" aria-hidden="true"></span>
+          <h6 class="fw-semibold mb-1"><i class="bi bi-geo-alt me-2"></i>Primeira viagem juntos</h6>
+          <div class="text-muted small">Setembro 2024</div>
+        </div>
+        <div class="tl-item">
+          <span class="dot" aria-hidden="true"></span>
+          <h6 class="fw-semibold mb-1"><i class="bi bi-hearts me-2"></i>Nicolas</h6>
+          <div class="text-muted small">Julho 2025</div>
+        </div>
+        <div class="tl-item">
+          <span class="dot" aria-hidden="true"></span>
+          <h6 class="fw-semibold mb-1"><i class="bi bi-calendar-heart me-2"></i>Data marcada</h6>
+          <div class="text-muted small">06/12/2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERIMÔNIA -->
+  <section id="cerimonia" class="bg-sand" aria-labelledby="cerimonia-title">
+    <div class="container">
+      <h2 id="cerimonia-title" class="section-title" data-aos="fade-up">Cerimônia e Recepção</h2>
+      <p class="section-lead" data-aos="fade-up" data-aos-delay="50">Vai ser lindo — e a sua presença é essencial.</p>
+
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up">
+            <div class="info-card h-100 text-center">
+                <!-- Imagem do local -->
+                <img src="./images/local.jpg" 
+                    alt="Imagem 1 do local da cerimônia" 
+                    class="img-fluid rounded-4 mb-3" 
+                    style="max-height:200px; object-fit:cover; width:100%;">
+
+                <!-- Ícone e informações -->
+                <div class="info-icon mx-auto"><i class="bi bi-geo-alt"></i></div>
+                <h6 class="fw-semibold">Local</h6>
+                <p class="mb-0" id="venueName">Chácara Luz Da Lua</p>
+                <small class="text-muted">Rua Engenheiro Nilton Alves do Nascimento 620</small>
+                <small class="text-muted" id="venueCity">Uberaba, MG</small>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="info-card h-100 d-flex flex-column">
+            <div class="info-icon"><i class="bi bi-map"></i></div>
+            <h6 class="fw-semibold">Mapa</h6>
+            <div class="ratio ratio-4x3 rounded overflow-hidden mb-2">
+              <iframe id="mapIframe" title="Mapa do local" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <a id="mapLink" target="_blank" rel="noopener" class="btn btn-gradient mt-auto"><i class="bi bi-compass me-2"></i>Como chegar</a>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="info-card h-100 text-center">
+            <img src="./images/cerimonia.jpg" 
+                alt="Imagem 2 do local da cerimônia" 
+                class="img-fluid rounded-4 mb-3" 
+                style="max-height:200px; object-fit:cover; width:100%;">
+            <div class="info-icon mx-auto"><i class="bi bi-clock"></i></div>
+            <h6 class="fw-semibold">Data &amp; Hora</h6>
+            <p class="mb-0"><span id="dateText">06/12/2025</span> às <span id="timeText">17:00</span></p>
+                <small class="text-muted">Cerimônia &</small><br>
+                <small class="text-muted">Celebração</small>
+        </div>
+        </div>
+      </div>
+
+      <div class="row mt-4 g-4">
+        <div class="col-lg-10 mx-auto" data-aos="fade-up" data-aos-delay="150">
+          <div class="p-4 rounded-4 bg-mint-veil">
+            <h6 class="fw-semibold"><i class="bi bi-stars me-2"></i>Observações aos convidados</h6>
+            <ul class="mb-0">
+              <li>Dress code: esporte fino em tons claros.</li>
+              <li>Estacionamento no local.</li>
+              <li>A cerimônia começa pontualmente às 17h.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRESENTES -->
+  <section id="presentes" aria-labelledby="presentes-title">
+    <div class="container">
+      <h2 id="presentes-title" class="section-title" data-aos="fade-up">Lista de Presentes</h2>
+      <p class="section-lead" data-aos="fade-up" data-aos-delay="50">
+        Prefira experiências que vão marcar nossa história. Obrigado pelo carinho! 💚
+      </p>
+
+      <div class="row g-4" id="giftsGrid" aria-live="polite">
+        <!-- Cards de presentes gerados via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" class="bg-sand" aria-labelledby="rsvp-title">
+    <div class="container">
+      <h2 id="rsvp-title" class="section-title" data-aos="fade-up">Confirme sua presença</h2>
+      <p class="section-lead" data-aos="fade-up" data-aos-delay="50">Preencha o formulário abaixo. Mal podemos esperar por você!</p>
+
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="rsvp-card p-4" data-aos="fade-up">
+            <form id="rsvpForm" novalidate>
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Nome completo</label>
+                <input type="text" class="form-control" id="fullName" name="entry.nome" placeholder="Seu nome" required aria-required="true">
+                <div class="invalid-feedback">Informe seu nome.</div>
+              </div>
+              <div class="mb-3">
+                <label for="guests" class="form-label">Número de acompanhantes</label>
+                <input type="number" min="0" class="form-control" id="guests" name="entry.acompanhantes" placeholder="0" required aria-required="true">
+                <div class="invalid-feedback">Informe o número de acompanhantes (0 se for sozinho[a]).</div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Mensagem (opcional)</label>
+                <textarea class="form-control" id="message" name="entry.mensagem" rows="3" placeholder="Deixe um recado para os noivos"></textarea>
+              </div>
+              <button class="btn btn-gradient" type="submit"><i class="bi bi-envelope-check me-2"></i>Confirmar presença</button>
+              <div id="rsvpThanks" class="alert alert-success mt-3 d-none" role="status">
+                Obrigado! Mal podemos esperar por você! 🎉
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer aria-labelledby="footer-title">
+    <div class="container text-center">
+      <h6 id="footer-title" class="fw-semibold mb-2">Com amor, Leandro e Manu 💕</h6>
+      <p class="footer-note mb-3">Obrigado por fazer parte do nosso dia.</p>
+      <small class="text-muted">&copy; <span id="year"></span> Leandro &amp; Manu. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <!-- MODAL PIX -->
+  <div class="modal fade" id="pixModal" tabindex="-1" aria-labelledby="pixModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="pixModalLabel"><i class="bi bi-gift me-2"></i>Obrigado pelo carinho!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-2">Copie o PIX abaixo para nos presentear 💚</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="pixKeyInput" aria-label="Chave PIX" readonly>
+            <button class="btn btn-gradient" id="copyPixBtn" type="button"><i class="bi bi-clipboard-check me-1"></i>Copiar</button>
+          </div>
+          <div class="text-center">
+            <div id="qrcode" class="d-inline-block border rounded p-2"></div>
+            <div class="form-text mt-2">Aponte a câmera para o QR Code para pagar</div>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+  <script>
+    /* ==== CONFIG EDITÁVEL ====================================================
+      Edite os campos abaixo conforme necessário. Tudo o que aparece no site
+      puxa destes valores. Mantive exemplos de imagens (Unsplash) — troque à vontade.
+    ========================================================================== */
+    const config = {
+      coupleNames: "Leandro & Manu",
+      date: "01/11/2025",
+      time: "17:00",
+      venueName: "Espaço Encanto",
+      venueCity: "Uberaba, MG",
+      /* Google Maps: cole sua URL de embed (iframe) e o link 'Como chegar' */
+      map: {
+        embedSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.8513676291414!2d-47.94137572477658!3d-19.784965181571067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bad00a6456e8a3%3A0x4b165c52d358d7ce!2sCh%C3%A1cara%20Luz%20Da%20Lua%20Eventos!5e1!3m2!1spt-PT!2sbr!4v1761777972168!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade',
+        directions: "https://maps.app.goo.gl/A5x3KcEvNGkePz8H8"
+      },
+      social: {
+        instagram: "https://instagram.com/",
+        whatsapp: "https://wa.me/5599999999999"
+      },
+      pix: {
+        chave: "b4f3a2e7-xxxx-xxxx-xxxx-xxxxxxxxxxxx",          // chave copia e cola
+        payload: "00020126330014BR.GOV.BCB.PIX0118b4f3a2e7-xxxx-xxxx-xxxx-xxxxxxxxxxxx5204000053039865406.005802BR5920LEANDRO E MANU6009UBERABA62070503***6304ABCD" // payload EMV opcional
+      },
+      gifts: [
+          { title:"Kit IPAS Invicta", price:94.70, img:"./images/ipas.jpg", tag:"Gastronomia" },
+          { title:"Almoço Restaurante do Turvo", price:150.00, img:"./images/turvo.jpg", tag:"Gastronomia" },
+          { title:"2 Ingressos Thermas dos Laranjais", price:320.00, img:"./images/thermas.jpg", tag:"Passeio" },
+          { title:"Dia de spa para o casal", price:200.00, img:"./images/arpuro.jpg", tag:"Passeio" },
+          { title:"Diária Pousada Encantos do cerrado", price:500.00, img:"./images/encantos.jpg", tag:"Experiência" },
+          { title:"Diária Resort Salinas Maragogi", price:2800.00, img:"./images/maragogi.jpg", tag:"Experiência" },
+      ],
+      /* RSVP: deixe submitUrl vazio para exibir apenas a mensagem "Obrigado!".
+         Para Google Forms, cole a URL do form em submitUrl e ajuste os names dos campos:
+         name="entry.xxxxx", etc. */
+      rsvp: {
+        submitUrl: "" // ex: "https://docs.google.com/forms/d/e/SEU_ID_FORM/formResponse"
+      }
+    };
+
+    /* ==== LÓGICA DO SITE ==================================================== */
+
+    // Navbar transparente -> sólida ao rolar
+    const nav = document.querySelector('.navbar');
+    const setNavSolid = () => {
+      if(window.scrollY > 40){ nav.classList.remove('transparent'); nav.classList.add('solid'); }
+      else { nav.classList.add('transparent'); nav.classList.remove('solid'); }
+    };
+    setNavSolid();
+    window.addEventListener('scroll', setNavSolid);
+
+    // AOS (animações)
+    AOS.init({ once:true, duration:700, easing:'ease-out-cubic' });
+
+    // Preenche textos dinâmicos
+    document.querySelectorAll('.brand').forEach(el => el.textContent = config.coupleNames);
+    document.getElementById('venueName').textContent = config.venueName;
+    document.getElementById('venueCity').textContent = config.venueCity;
+    document.getElementById('dateText').textContent = config.date;
+    document.getElementById('timeText').textContent = config.time;
+    document.getElementById('mapIframe').src = config.map.embedSrc;
+    document.getElementById('mapLink').href = config.map.directions;
+    document.getElementById('igLink').href = config.social.instagram;
+    document.getElementById('waLink').href = config.social.whatsapp;
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Monta cards de presentes
+    const grid = document.getElementById('giftsGrid');
+    const currency = (v) => v.toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
+    config.gifts.forEach((g, idx) => {
+      const col = document.createElement('div');
+      col.className = 'col-12 col-md-6 col-lg-4';
+      col.innerHTML = `
+        <article class="gift-card" data-aos="fade-up" data-aos-delay="${idx*50}">
+          <img class="gift-img" src="${g.img}" alt="${g.title}" />
+          <div class="gift-body">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <h6 class="fw-semibold mb-0">${g.title}</h6>
+              <span class="badge rounded-pill badge-exp">${g.tag||'Experiência'}</span>
+            </div>
+            <div class="price mb-3">${currency(g.price)}</div>
+            <button class="btn btn-gradient w-100 presentear-btn" data-title="${g.title}">
+              <i class="bi bi-heart-fill me-2"></i>Presentear
+            </button>
+          </div>
+        </article>
+      `;
+      grid.appendChild(col);
+    });
+
+    // Modal PIX: abrir e gerar QR
+    const pixModal = new bootstrap.Modal('#pixModal');
+    const pixInput = document.getElementById('pixKeyInput');
+    const copyBtn = document.getElementById('copyPixBtn');
+    const qrContainer = document.getElementById('qrcode');
+    let qr;
+
+    function openPixModal(itemTitle){
+      // Define chave PIX no input
+      pixInput.value = config.pix.chave || '';
+      // Limpa QR anterior
+      qrContainer.innerHTML = "";
+      // Gera QR do payload se existir, senão gera QR da chave
+      const qrText = config.pix.payload && config.pix.payload.length > 12 ? config.pix.payload : (config.pix.chave || 'PIX');
+      qr = new QRCode(qrContainer, { text: qrText, width: 164, height: 164 });
+      // Título contextual
+      const label = document.getElementById('pixModalLabel');
+      label.innerHTML = `<i class="bi bi-gift me-2"></i>Obrigado pelo carinho! <small class="text-muted d-block mt-1">${itemTitle || ''}</small>`;
+      pixModal.show();
+    }
+
+    document.querySelectorAll('.presentear-btn').forEach(btn=>{
+      btn.addEventListener('click', (e)=>{
+        const title = e.currentTarget.getAttribute('data-title') || '';
+        openPixModal(title);
+      });
+    });
+
+    // Copiar PIX
+    copyBtn.addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(pixInput.value);
+        copyBtn.innerHTML = '<i class="bi bi-clipboard-check me-1"></i>Copiado!';
+        setTimeout(()=> copyBtn.innerHTML = '<i class="bi bi-clipboard-check me-1"></i>Copiar', 1500);
+      }catch(err){
+        alert('Não foi possível copiar. Selecione e copie manualmente.');
+      }
+    });
+
+    // RSVP
+    const rsvpForm = document.getElementById('rsvpForm');
+    const rsvpThanks = document.getElementById('rsvpThanks');
+
+    rsvpForm.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      // Validação simples Bootstrap
+      if(!rsvpForm.checkValidity()){
+        rsvpForm.classList.add('was-validated');
+        return;
+      }
+      const formData = new FormData(rsvpForm);
+
+      if(config.rsvp.submitUrl){
+        // Envio "silencioso" (Google Forms)
+        try{
+          const resp = await fetch(config.rsvp.submitUrl, {
+            method:'POST',
+            mode:'no-cors',
+            body: formData
+          });
+          // Google Forms com no-cors não retorna status legível; exibimos sucesso otimista
+          rsvpThanks.classList.remove('d-none');
+          rsvpForm.reset();
+        }catch(err){
+          alert('Houve um problema ao enviar. Tente novamente mais tarde.');
+        }
+      }else{
+        // Sem backend: apenas feedback
+        rsvpThanks.classList.remove('d-none');
+        rsvpForm.reset();
+      }
+    });
+
+    // Acessibilidade extra: fecho do modal com ESC é nativo do Bootstrap
+  </script>
+</body>
+</html>
