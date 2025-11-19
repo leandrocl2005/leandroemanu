@@ -126,26 +126,64 @@
       background:#fff; padding:12px 12px 36px; border-radius:16px; display:inline-block;
       box-shadow: 0 16px 40px rgba(0,0,0,.08);
     }
-    .timeline{
-      position:relative; padding: 20px 0; margin-top: 24px;
+    .timeline-map{
+      position:relative;
+      background: var(--sb-sand);
+      border-radius: 28px;
+      padding: 32px;
+      margin-top: 32px;
+      overflow:hidden;
+      box-shadow: inset 0 0 0 2px rgba(215,185,142,.3), 0 16px 30px rgba(0,0,0,.05);
     }
-    .timeline::before{
-      content:""; position:absolute; left: 8px; top:0; bottom:0; width:2px; background: linear-gradient(var(--sb-mint), var(--sb-gold));
+    .timeline-map::after{
+      content:"";
+      position:absolute;
+      inset:16px;
+      border:1px dashed rgba(215,185,142,.4);
+      pointer-events:none;
     }
-    .tl-item{position:relative; padding-left:36px; margin-bottom:20px;}
-    .tl-item .dot{
-      position:absolute; left:-1px; top:4px; width:18px; height:18px; border-radius:50%;
-      background: var(--sb-mint); border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,.12);
+    .map-path{
+      width:100%;
+      height:280px;
+      display:block;
     }
-    @media(min-width:992px){
-      .timeline{
-        display:flex; gap:24px; align-items:flex-start;
+    .map-stop{
+      position:absolute;
+      width:190px;
+      max-width:40%;
+      background:#fff;
+      border-radius:18px;
+      padding:12px 16px;
+      box-shadow:0 10px 20px rgba(0,0,0,.08);
+      border:1px solid rgba(215,185,142,.3);
+    }
+    .map-pin{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--sb-mint);
+      color:#fff;
+      margin-bottom:6px;
+      box-shadow:0 6px 12px rgba(0,0,0,.12);
+      font-size:1.1rem;
+    }
+    .stop-1{top:40px; left:4%;}
+    .stop-2{top:10px; left:35%;}
+    .stop-3{top:170px; left:57%;}
+    .stop-4{top:80px; right:4%;}
+    @media(max-width: 767.98px){
+      .timeline-map{padding:24px;}
+      .map-path{display:none;}
+      .map-stop{
+        position:static;
+        width:100%;
+        max-width:none;
+        margin-bottom:16px;
       }
-      .timeline::before{display:none;}
-      .tl-item{
-        flex:1; padding:0; margin:0; text-align:center;
-      }
-      .tl-item .dot{position:static; display:inline-block; margin-bottom:10px;}
+      .timeline-map::after{display:none;}
     }
 
     /* Cerimônia */
@@ -295,25 +333,33 @@
 
 
       <!-- Timeline -->
-      <div class="timeline mt-4" aria-label="Linha do tempo" data-aos="fade-up" data-aos-delay="100">
-        <div class="tl-item">
-          <span class="dot" aria-hidden="true"></span>
-          <h6 class="fw-semibold mb-1"><i class="bi bi-flower1 me-2"></i>Primeiro encontro</h6>
+      <div class="timeline-map" aria-label="Linha do tempo" data-aos="fade-up" data-aos-delay="100">
+        <svg class="map-path" viewBox="0 0 800 280" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <marker id="plane" markerWidth="16" markerHeight="16" refX="8" refY="8">
+              <path d="M0,6 L16,8 L0,10 L4,8 z" fill="#d7b98e" />
+            </marker>
+          </defs>
+          <path d="M20,240 C150,40 320,360 440,140 S640,190 780,60" fill="none" stroke="#c09a64" stroke-width="6" stroke-linecap="round" stroke-dasharray="12 14" marker-end="url(#plane)"></path>
+        </svg>
+        <div class="map-stop stop-1">
+          <div class="map-pin"><i class="bi bi-flower1"></i></div>
+          <h6 class="fw-semibold mb-1">Primeiro encontro</h6>
           <div class="text-muted small">Março 2024</div>
         </div>
-        <div class="tl-item">
-          <span class="dot" aria-hidden="true"></span>
-          <h6 class="fw-semibold mb-1"><i class="bi bi-geo-alt me-2"></i>Primeira viagem juntos</h6>
+        <div class="map-stop stop-2">
+          <div class="map-pin"><i class="bi bi-geo-alt"></i></div>
+          <h6 class="fw-semibold mb-1">Primeira viagem</h6>
           <div class="text-muted small">Setembro 2024</div>
         </div>
-        <div class="tl-item">
-          <span class="dot" aria-hidden="true"></span>
-          <h6 class="fw-semibold mb-1"><i class="bi bi-hearts me-2"></i>Ayla</h6>
+        <div class="map-stop stop-3">
+          <div class="map-pin"><i class="bi bi-hearts"></i></div>
+          <h6 class="fw-semibold mb-1">Ayla</h6>
           <div class="text-muted small">Julho 2025</div>
         </div>
-        <div class="tl-item">
-          <span class="dot" aria-hidden="true"></span>
-          <h6 class="fw-semibold mb-1"><i class="bi bi-calendar-heart me-2"></i>Data marcada</h6>
+        <div class="map-stop stop-4">
+          <div class="map-pin"><i class="bi bi-calendar-heart"></i></div>
+          <h6 class="fw-semibold mb-1">Data marcada</h6>
           <div class="text-muted small">06/12/2025</div>
         </div>
       </div>
